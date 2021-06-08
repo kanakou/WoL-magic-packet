@@ -11,8 +11,7 @@ int main(int argc, char* argv[])
 	struct sockaddr_in addr;
 	BOOL yes = 1;
 	char buf[102];
-	char mac[] = { 0x30, 0x9c, 0x23, 0xa4, 0x2b, 0x5d };
-		//{ 0x00, 0x1b, 0x21, 0x80, 0x20, 0x1e };
+	char mac[] = { 0x00, 0x00, 0x5e, 0x00, 0x53, 0x00 };	//mac address
 	int err;
 
 	/*if (argc < 2)
@@ -22,7 +21,7 @@ int main(int argc, char* argv[])
 
 	//mac = (char)strtol(argv[2], NULL, 16);
 
-	/*err =*/ WSAStartup(MAKEWORD(2, 0), &wsaData);
+	err = WSAStartup(MAKEWORD(2, 0), &wsaData);
 	/*switch (err)
 	{
 	case 0:
